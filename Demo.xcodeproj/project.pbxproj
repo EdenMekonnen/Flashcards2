@@ -12,6 +12,7 @@
 		F219931C1F2FF4F90025F2D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F219931A1F2FF4F90025F2D2 /* Main.storyboard */; };
 		F219931E1F2FF4F90025F2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F219931D1F2FF4F90025F2D2 /* Assets.xcassets */; };
 		F21993211F2FF4F90025F2D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F219931F1F2FF4F90025F2D2 /* LaunchScreen.storyboard */; };
+		F21993311F2FF6490025F2D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21993301F2FF6490025F2D2 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		F219931D1F2FF4F90025F2D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F21993201F2FF4F90025F2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21993221F2FF4F90025F2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F21993291F2FF5430025F2D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F219932B1F2FF5640025F2D2 /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
+		F21993301F2FF6490025F2D2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 			children = (
 				F21993151F2FF4F90025F2D2 /* Demo */,
 				F21993141F2FF4F90025F2D2 /* Products */,
+				F21993281F2FF5430025F2D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +59,24 @@
 		F21993151F2FF4F90025F2D2 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				F219932B1F2FF5640025F2D2 /* Demo.entitlements */,
 				F21993161F2FF4F90025F2D2 /* AppDelegate.swift */,
 				F21993181F2FF4F90025F2D2 /* ViewController.swift */,
 				F219931A1F2FF4F90025F2D2 /* Main.storyboard */,
+				F21993301F2FF6490025F2D2 /* HomeViewController.swift */,
 				F219931D1F2FF4F90025F2D2 /* Assets.xcassets */,
 				F219931F1F2FF4F90025F2D2 /* LaunchScreen.storyboard */,
 				F21993221F2FF4F90025F2D2 /* Info.plist */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		F21993281F2FF5430025F2D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F21993291F2FF5430025F2D2 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +111,19 @@
 				TargetAttributes = {
 					F21993121F2FF4F90025F2D2 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CKN4SN4T58;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -138,6 +165,7 @@
 			files = (
 				F21993191F2FF4F90025F2D2 /* ViewController.swift in Sources */,
 				F21993171F2FF4F90025F2D2 /* AppDelegate.swift in Sources */,
+				F21993311F2FF6490025F2D2 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,11 +290,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CKN4SN4T58;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Coding.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -274,11 +304,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CKN4SN4T58;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Coding.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
